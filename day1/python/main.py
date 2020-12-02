@@ -74,24 +74,24 @@ def main(file, total, numvariables, sort):
 
 
 start_time = time.time()
-print("- Test (no sort): " + str(main("day1/test.txt", 2020, 2, False)) + " [%s seconds]" % (
+print("- Test (no sort): " + str(main("../inputs/test.txt", 2020, 2, False)) + " [%s seconds]" % (
         time.time() - start_time))
 
 start_time = time.time()
-print("- Test (sort): " + str(main("day1/test.txt", 2020, 2, True)) + " [%s seconds]" % (time.time() - start_time))
+print("- Test (sort): " + str(main("../inputs/test.txt", 2020, 2, True)) + " [%s seconds]" % (time.time() - start_time))
 
 start_time = time.time()
-print("- Part One (no sort): " + str(main("day1/input.txt", 2020, 2, False)) + " [%s seconds]" % (
+print("- Part One (no sort): " + str(main("../inputs/input.txt", 2020, 2, False)) + " [%s seconds]" % (
         time.time() - start_time))
 
 start_time = time.time()
-print("- Part One (sort): " + str(main("day1/input.txt", 2020, 2, True)) + " [%s seconds]" % (
+print("- Part One (sort): " + str(main("../inputs/input.txt", 2020, 2, True)) + " [%s seconds]" % (
         time.time() - start_time))
 
 start_time = time.time()
-print("- Part Two (no sort): " + str(main("day1/input2.txt", 2020, 3, False)) + " [%s seconds]" % (
+print("- Part Two (no sort): " + str(main("../inputs/input2.txt", 2020, 3, False)) + " [%s seconds]" % (
         time.time() - start_time))
 
 start_time = time.time()
-print("- Part Two (sort): " + str(main("day1/input2.txt", 2020, 3, True)) + " [%s seconds]" % (
+print("- Part Two (sort): " + str(main("../inputs/input2.txt", 2020, 3, True)) + " [%s seconds]" % (
         time.time() - start_time))
