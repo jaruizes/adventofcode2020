@@ -1,4 +1,5 @@
 const fs = require('fs')
+const assert = require('assert');
 
 
 const multiply = (numbers_solving_equation) => {
@@ -60,12 +61,16 @@ const main = (filepath, total, numvariables, sort) => {
 const start1 = process.hrtime();
 main('../inputs/test.txt', 2020, 2, false).then(result => {
     const hrend = process.hrtime(start1)
+
+    assert.strictEqual(result, 514579);
     console.log('- Test (no sort): ' + result + ' [%dms]', hrend[1] / 1000000000);
 });
 
 const start2 = process.hrtime();
-main('../inputs/test.txt', 2020, 2, true).then(result => {
-    const hrend = process.hrtime(start2)
+main('../inputs/test.txt', 2020, 3, true).then(result => {
+    const hrend = process.hrtime(start2);
+
+    assert.strictEqual(result, 241861950);
     console.log('- Test (sort): ' + result + ' [%dms]', hrend[1] / 1000000000);
 });
 

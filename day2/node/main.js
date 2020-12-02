@@ -1,5 +1,5 @@
 const fs = require('fs')
-
+const assert = require('assert');
 
 const validate_password_method_one = (password, pattern) => {
    const pattern_parts = pattern.split(' ');
@@ -56,12 +56,16 @@ const main = (filepath, validation_method) => {
 const start1 = process.hrtime();
 main('../inputs/test.txt', validate_password_method_one).then(result => {
     const hrend = process.hrtime(start1)
+
+    assert.strictEqual(result, 2);
     console.log('- Test (method 1): ' + result + ' [%dms]', hrend[1] / 1000000000);
 });
 
 const start2 = process.hrtime();
 main('../inputs/test.txt', validate_password_method_two).then(result => {
     const hrend = process.hrtime(start2)
+
+    assert.strictEqual(result, 1);
     console.log('- Test (method 2): ' + result + ' [%dms]', hrend[1] / 1000000000);
 });
 
