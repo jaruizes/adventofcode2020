@@ -1,6 +1,4 @@
-import re
 import time
-from string import Template
 
 
 def readfile(filepath):
