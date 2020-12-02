@@ -73,12 +73,9 @@ def main(file, total, numvariables, sort):
         print("Equation not solved")
 
 
-start_time = time.time()
-print("- Test (no sort): " + str(main("../inputs/test.txt", 2020, 2, False)) + " [%s seconds]" % (
-        time.time() - start_time))
-
-start_time = time.time()
-print("- Test (sort): " + str(main("../inputs/test.txt", 2020, 2, True)) + " [%s seconds]" % (time.time() - start_time))
+## Asserts
+assert main("../inputs/test.txt", 2020, 2, False) == 514579
+assert main("../inputs/test.txt", 2020, 3, False) == 241861950
 
 start_time = time.time()
 print("- Part One (no sort): " + str(main("../inputs/input.txt", 2020, 2, False)) + " [%s seconds]" % (

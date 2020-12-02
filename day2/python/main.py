@@ -79,14 +79,16 @@ def main(file, validation_method):
     return passwords_ok
 
 
-start_time = time.time()
-print("- Test (method 1): " + str(main('../inputs/test.txt', validate_password_method_one)) + " passwords ok [%s seconds]" % (time.time() - start_time))
+## Asserts
+assert main('../inputs/test.txt', validate_password_method_one) == 2
+assert main('../inputs/test.txt', validate_password_method_two) == 1
 
 start_time = time.time()
-print("- Test (method 2): " + str(main('../inputs/test.txt', validate_password_method_two)) + " passwords ok [%s seconds]" % (time.time() - start_time))
+print(
+    "- Part One (method 1): " + str(main('../inputs/input.txt', validate_password_method_one)) + " ok [%s seconds]" % (
+                time.time() - start_time))
 
 start_time = time.time()
-print("- Part One (method 1): " + str(main('../inputs/input.txt', validate_password_method_one)) + " ok [%s seconds]" % (time.time() - start_time))
-
-start_time = time.time()
-print("- Part Two (method 2): " + str(main('../inputs/input.txt', validate_password_method_two)) + " ok [%s seconds]" % (time.time() - start_time))
+print(
+    "- Part Two (method 2): " + str(main('../inputs/input.txt', validate_password_method_two)) + " ok [%s seconds]" % (
+                time.time() - start_time))
