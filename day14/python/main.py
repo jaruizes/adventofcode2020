@@ -23,7 +23,7 @@ def read_instructions(filepath, apply_mask_to_value, apply_mask_to_memory):
             if apply_mask_to_value:
                 binary_value = apply_mask(mask, binary_value)
 
-            commands.append([memory_positions, instruction_value, binary_value, binary_value])
+            commands.append([memory_positions, binary_value])
 
     instructions_file.close()
     instructions['commands'] = commands
@@ -81,7 +81,7 @@ def initialize_memory(filepath, apply_mask_to_value, apply_mask_to_memory):
 
     for command in instructions['commands']:
         for memory_pos in command[0]:
-            memory[memory_pos - 1] = binary_to_decimal(command[3])
+            memory[memory_pos - 1] = binary_to_decimal(command[1])
 
     total = 0
     for pos in memory:
