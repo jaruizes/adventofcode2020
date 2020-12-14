@@ -1,3 +1,6 @@
+from math import ceil
+
+
 def read_notes(filepath):
     notes_file = open(filepath, "r")
     lines = notes_file.read().splitlines()
